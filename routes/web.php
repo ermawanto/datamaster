@@ -10,6 +10,11 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+$app->post('/fetch', [
+    'middleware' => 'csrf',
+    'as' => 'fetchInfo', 'uses' => 'App\Http\Controllers\AppController@fetchInfo'
+]);
+
 //for function user
 $app->get('/', function () use ($app) {
     //return $app->version();
@@ -40,6 +45,7 @@ $app->get('/user/{id}', ['middleware' => 'auth', 'uses' => 'UserController@get_u
 $app->get('/all', 'CustomerController@index');
 
 $app->get('/customer', 'CustomerController@index');
+$app->get('/customer/show' , 'CustomerController@show');
 $app->get('/customer/id/{id}', 'CustomerController@read');
 $app->get('/customer/delete/{id}', 'CustomerController@delete');
 $app->post('/customer/create', 'CustomerController@create');

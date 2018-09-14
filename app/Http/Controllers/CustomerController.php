@@ -18,7 +18,14 @@ class CustomerController extends Controller
      */
     public function index(Request $request)
     {
-      // $customer = Customer::select('id','kode_customer', 'nama_customer', 'nama_pimpinan', 'alamat', 'kode_propinsi', 'kode_kabupaten', 'sales_group', 'no_telepon', 'npwp', 'email', 'active')->get();
+      return view('customer.index');
+    }
+    /**
+     * Insert database for ItemAds
+     * Url : /item_ads
+     */
+    public function show(Request $request){
+      return $customer = Customer::select('id','kode_customer', 'nama_customer', 'nama_pimpinan', 'alamat', 'kode_propinsi', 'kode_kabupaten', 'sales_group', 'no_telepon', 'npwp', 'email', 'active')->get();
       // if (count($customer) !== 0) {
       //     $res['success'] = true;
       //     $res['result'] = $customer;
@@ -28,13 +35,7 @@ class CustomerController extends Controller
       //     $res['result'] = 'Data Tidak Ditemukan!';
       //     return response($res);
       // }
-
-      return view('customer.index');
     }
-    /**
-     * Insert database for ItemAds
-     * Url : /item_ads
-     */
     public function create(Request $request)
     {
       $customer = new Customer;
