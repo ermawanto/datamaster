@@ -45,9 +45,11 @@ $app->get('/customer/delete/{id}', 'CustomerController@delete');
 $app->post('/customer/create', 'CustomerController@create');
 $app->get('/customer/create', function () use ($app) {
     // return $app->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
+    // $res['success'] = false;
+    // $res['result'] = 'Not Allowed Method!';
+    // return response($res);
+
+    return 'this is create customer';
 });
 $app->post('/customer/update/{id}', 'CustomerController@update');
 $app->get('/customer/update/{id}', function () use ($app) {

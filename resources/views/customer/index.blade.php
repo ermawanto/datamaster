@@ -28,7 +28,10 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Stripped Table</strong>
+                        <strong class="card-title">Table</strong>
+                        <div style="float:right">
+                          <a href="{{url('customer/create')}}"><button class="btn btn-md btn-success">Create</button></a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <table class="table table-striped">
