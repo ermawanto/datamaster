@@ -15,7 +15,7 @@ $app->get('/', function () use ($app) {
     //return $app->version();
     $res['success']=true;
     $res['result']='Welcome to Data Master';
-    return response($res);
+    return view('dashboard');
 });
 
 $app->post('/login', 'LoginController@index');

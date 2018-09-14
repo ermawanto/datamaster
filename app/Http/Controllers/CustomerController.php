@@ -11,23 +11,25 @@ class CustomerController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('auth');
+       // $this->middleware('auth');
     }
     /**
      * Get all data from customer
      */
     public function index(Request $request)
     {
-      $customer = Customer::select('id','kode_customer', 'nama_customer', 'nama_pimpinan', 'alamat', 'kode_propinsi', 'kode_kabupaten', 'sales_group', 'no_telepon', 'npwp', 'email', 'active')->get();
-      if (count($customer) !== 0) {
-          $res['success'] = true;
-          $res['result'] = $customer;
-          return response($res);
-      }else{
-          $res['success'] = true;
-          $res['result'] = 'Data Tidak Ditemukan!';
-          return response($res);
-      }
+      // $customer = Customer::select('id','kode_customer', 'nama_customer', 'nama_pimpinan', 'alamat', 'kode_propinsi', 'kode_kabupaten', 'sales_group', 'no_telepon', 'npwp', 'email', 'active')->get();
+      // if (count($customer) !== 0) {
+      //     $res['success'] = true;
+      //     $res['result'] = $customer;
+      //     return response($res);
+      // }else{
+      //     $res['success'] = true;
+      //     $res['result'] = 'Data Tidak Ditemukan!';
+      //     return response($res);
+      // }
+
+      return view('customer.index');
     }
     /**
      * Insert database for ItemAds
