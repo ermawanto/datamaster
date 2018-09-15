@@ -47,15 +47,26 @@ $(document).ready(function() {
       $('#kirim').click(function(){
         let url = window.location.pathname + '/post';
         // di tambahin seperti yang di form
-        let alamat = $('#alamat').val();
+        let kode_customer = $('#kd_customer').val();
         let nama_customer = $('#nama_customer').val();
+        let nama_pimpinan = $('#nama_pimpinan').val();
+        let alamat = $('#alamat').val();
+        let kode_propinsi = $('#kode_propinsi').val();
+        let kode_kabupaten = $('#kode_kabupaten').val();
+        let sales_group = $('#sales_group').val();
+        let no_telepon = $('#no_telepon').val();
+        let npwp = $('#npwp').val();
+        let email = $('#email').val();
+        let active = $('#active').val();
+
 
         $.ajax({
           url: url,
           type: 'post',
           data: {
             // di tambahin seperti yang di form
-            alamat:alamat, nama_customer:nama_customer
+            kd_customer:kd_customer, nama_customer:nama_customer, nama_pimpinan:nama_pimpinan, alamat:alamat, kode_propinsi:kode_propinsi, kode_kabupaten:kode_kabupaten,
+            sales_group:sales_group, no_telepon:no_telepon, npwp:npwp, email:email, active:active
           }
         }).done(function(data){
           console.log(data);
