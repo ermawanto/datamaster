@@ -25,7 +25,7 @@ class CustomerController extends Controller
      * Url : /item_ads
      */
     public function show(Request $request){
-      return $customer = Customer::paginate(10);
+      return $customer = Customer::paginate(150);
       // if (count($customer) !== 0) {
       //     $res['success'] = true;
       //     $res['result'] = $customer;

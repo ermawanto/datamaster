@@ -38,7 +38,18 @@
                           <thead>
                             <tr>
                               <th scope="col">#</th>
+                              <th>Id</th>
+                              <th>Kode Customer</th>
+                              <th>Nama Customer</th>
+                              <th>Nama Pimpinan</th>
                               <th>Alamat</th>
+                              <th>Kode Propinsi</th>
+                              <th>Kode Kabupaten</th>
+                              <th>Sales Group</th>
+                              <th>No Telepon</th>
+                              <th>NPWP</th>
+                              <th>Email</th>
+                              <th>Active</th>
                             </tr>
                           </thead>
                           <tbody>
