@@ -4,35 +4,34 @@ use Illuminate\Http\Request;
 use App\Material;
 class MaterialController extends Controller
 {
-    /**
+       /**
      * Create a new auth instance.
      *
      * @return void
      */
     public function __construct()
     {
-       $this->middleware('auth');
+       // $this->middleware('auth');
     }
     /**
      * Get all data from material
      */
     public function index(Request $request)
     {
-      $material = Material::select('id','produk_desc', 'material_code', 'code_jenis_produk', 'nama_jenis_produk', 'group_produk', 'group_produk_desc', 'active')->get();
-      if (count($material) !== 0) {
-          $res['success'] = true;
-          $res['result'] = $material;
-          return response($res);
-      }else{
-          $res['success'] = true;
-          $res['result'] = 'Data Tidak Ditemukan!';
-          return response($res);
-      }
+      return view('material.index');
+    }
+
+    public function form(Request $request)
+    {
+      return view('material.form');
     }
     /**
      * Insert database for ItemAds
      * Url : /item_ads
      */
+     public function show(Request $request){
+      return $material = Material::orderBy('id','desc')->paginate(50);
+    }
     public function create(Request $request)
     {
       $material = new Material;

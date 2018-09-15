@@ -11,28 +11,27 @@ class PlantslocController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('auth');
+       // $this->middleware('auth');
     }
     /**
-     * Get all data from plantsloc
+     * Get all data from customer
      */
     public function index(Request $request)
     {
-      $plantsloc = Plantsloc::select('id','code_plant', 'nama_plant', 'code_storage_location', 'nama_storage_location', 'code_shipping_point', 'nama_shipping_point', 'code_propinsi')->get();
-      if (count($plantsloc) !== 0) {
-          $res['success'] = true;
-          $res['result'] = $plantsloc;
-          return response($res);
-      }else{
-          $res['success'] = true;
-          $res['result'] = 'Data Tidak Ditemukan!';
-          return response($res);
-      }
+      return view('plantsloc.index');
+    }
+
+    public function form(Request $request)
+    {
+      return view('plantsloc.form');
     }
     /**
      * Insert database for ItemAds
      * Url : /item_ads
      */
+    public function show(Request $request){
+      return $plantsloc = Plantsloc::orderBy('id','desc')->paginate(150);
+    }
     public function create(Request $request)
     {
       $plantsloc = new Plantsloc;

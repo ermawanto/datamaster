@@ -21,6 +21,15 @@
                     <li class="">
                         <a href="{{url('customer')}}"> <i class="menu-icon fa fa-suitcase"></i>Customer </a>
                     </li>
+                    <li class="">
+                        <a href="{{url('material')}}"> <i class="menu-icon fa fa-suitcase"></i>Material </a>
+                    </li>
+                    <li class="">
+                        <a href="{{url('plantsloc')}}"> <i class="menu-icon fa fa-suitcase"></i>Plantsloc </a>
+                    </li>
+                    <li class="">
+                        <a href="{{url('wilayah')}}"> <i class="menu-icon fa fa-suitcase"></i>Wilayah </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

@@ -11,28 +11,27 @@ class WilayahController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('auth');
+       // $this->middleware('auth');
     }
     /**
      * Get all data from wilayah
      */
     public function index(Request $request)
     {
-      $wilayah = Wilayah::select('id','sales_office', 'sales_office_desc', 'code_kabupaten', 'kabupaten', 'sales_group', 'code_kecamatan', 'kecamatan')->get();
-      if (count($wilayah) !== 0) {
-          $res['success'] = true;
-          $res['result'] = $wilayah;
-          return response($res);
-      }else{
-          $res['success'] = true;
-          $res['result'] = 'Data Tidak Ditemukan!';
-          return response($res);
-      }
+      return view('wilayah.index');
+    }
+
+    public function form(Request $request)
+    {
+      return view('wilayah.form');
     }
     /**
      * Insert database for ItemAds
      * Url : /item_ads
      */
+    public function show(Request $request){
+      return $wilayah = Wilayah::orderBy('id','desc')->paginate(150);
+    }
     public function create(Request $request)
     {
       $wilayah = new Wilayah;
