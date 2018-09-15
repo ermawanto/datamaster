@@ -25,7 +25,7 @@ class CustomerController extends Controller
      * Url : /item_ads
      */
     public function show(Request $request){
-      return $customer = Customer::select('id','kode_customer', 'nama_customer', 'nama_pimpinan', 'alamat', 'kode_propinsi', 'kode_kabupaten', 'sales_group', 'no_telepon', 'npwp', 'email', 'active')->get();
+      return $customer = Customer::paginate(10);
       // if (count($customer) !== 0) {
       //     $res['success'] = true;
       //     $res['result'] = $customer;

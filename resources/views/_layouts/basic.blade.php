@@ -29,6 +29,7 @@
 
 </head>
 <body>
+
   @yield('body')
 
   <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>

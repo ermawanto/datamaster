@@ -11,7 +11,8 @@ $(document).ready(function() {
             url: '/customer/show',
             data: {page:page}
         }).done(function(data){
-          console.log(data);
+          console.log(data.data);
+          manageRow(data.data);
         });
     }
     /* Add new Item table row */
@@ -19,9 +20,8 @@ $(document).ready(function() {
     	var	rows = '';
     	$.each( data, function( key, value ) {
     	  	rows = rows + '<tr>';
-    	  	rows = rows + '<td>'+value.title+'</td>';
-    	  	rows = rows + '<td>'+value.description+'</td>';
-    	  	rows = rows + '<td data-id="'+value.id+'">';
+    	  	rows = rows + '<td>'+(key + 1)+'</td>';
+    	  	rows = rows + '<td>'+value.alamat+'</td>';
             rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';
             rows = rows + '<button class="btn btn-danger remove-item">Delete</button>';
             rows = rows + '</td>';
