@@ -34,26 +34,29 @@ class CustomerController extends Controller
     }
     public function create(Request $request)
     {
-        return $request->input('alamat');
-      // $customer = new Customer;
-      // $customer->fill([
-      //   'kode_customer' => $request->input('kode_customer'),
-      //   'nama_customer' => $request->input('nama_customer'),
-      //   'nama_pimpinan' => $request->input('nama_pimpinan'),
-      //   'alamat' => $request->input('alamat'),
-      //   'kode_propinsi' => $request->input('kode_propinsi'),
-      //   'kode_kabupaten' => $request->input('kode_kabupaten'),
-      //   'sales_group' => $request->input('sales_group'),
-      //   'no_telepon' => $request->input('no_telepon'),
-      //   'npwp' => $request->input('npwp'),
-      //   'email' => $request->input('email'),
-      //   'active' => $request->input('active'),
-      // ]);
-      // if($customer->save()){
-      //   $res['success'] = true;
-      //   $res['result'] = 'Success add new Customer!';
-      //   return response($res);
-      // }
+        $customer = new Customer;
+        $customer->fill([
+          'kode_customer' => $request->input('kode_customer'),
+          'nama_customer' => $request->input('nama_customer'),
+          'nama_pimpinan' => $request->input('nama_pimpinan'),
+          'alamat' => $request->input('alamat'),
+          'kode_propinsi' => $request->input('kode_propinsi'),
+          'kode_kabupaten' => $request->input('kode_kabupaten'),
+          'sales_group' => $request->input('sales_group'),
+          'no_telepon' => $request->input('no_telepon'),
+          'npwp' => $request->input('npwp'),
+          'email' => $request->input('email'),
+          'active' => $request->input('active'),
+        ]);
+        if($customer->save()){
+          $res['success'] = true;
+          $res['result'] = 'Success add new Customer!';
+          return response($res);
+        }else{
+          $res['success'] = false;
+          $res['result'] = 'not success add new Customer!';
+          return response($res);
+        }
     }
     /**
      * Get one data ItemAds by id

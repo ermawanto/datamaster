@@ -25,7 +25,7 @@
   <div class="content mt-3">
       <div class="animated fadeIn">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <strong class="card-title">Table</strong>

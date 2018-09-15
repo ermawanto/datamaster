@@ -23,7 +23,7 @@ $(document).ready(function() {
     	  	rows = rows + '<tr>';
     	  	rows = rows + '<td>'+(key + 1)+'</td>';
             rows = rows + '<td>'+value.id+'</td>';
-    	  	rows = rows + '<td>'+value.kd_customer+'</td>';
+    	  	  rows = rows + '<td>'+value.kd_customer+'</td>';
             rows = rows + '<td>'+value.nama_customer+'</td>';
             rows = rows + '<td>'+value.nama_pimpinan+'</td>';
             rows = rows + '<td>'+value.alamat+'</td>';
@@ -46,12 +46,17 @@ $(document).ready(function() {
     function formCustomer() {
       $('#kirim').click(function(){
         let url = window.location.pathname + '/post';
+        // di tambahin seperti yang di form
         let alamat = $('#alamat').val();
+        let nama_customer = $('#nama_customer').val();
 
         $.ajax({
           url: url,
           type: 'post',
-          data: {alamat:alamat}
+          data: {
+            // di tambahin seperti yang di form
+            alamat:alamat, nama_customer:nama_customer
+          }
         }).done(function(data){
           console.log(data);
         });
