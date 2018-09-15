@@ -50,6 +50,7 @@
                               <th>NPWP</th>
                               <th>Email</th>
                               <th>Active</th>
+                              <th>Action</th>
                             </tr>
                           </thead>
                           <tbody id="customer">

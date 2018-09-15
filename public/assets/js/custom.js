@@ -34,6 +34,7 @@ $(document).ready(function() {
             rows = rows + '<td>'+value.npwp+'</td>';
             rows = rows + '<td>'+value.email+'</td>';
             rows = rows + '<td>'+value.active+'</td>';
+            rows = rows + '<td>';
             rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';
             rows = rows + '<button class="btn btn-danger remove-item">Delete</button>';
             rows = rows + '</td>';
