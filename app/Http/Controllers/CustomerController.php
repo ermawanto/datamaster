@@ -30,17 +30,17 @@ class CustomerController extends Controller
      * Url : /item_ads
      */
     public function show(Request $request){
-      return $customer = Customer::paginate(150);
+      return $customer = Customer::orderBy('id','desc')->paginate(150);
     }
     public function create(Request $request)
     {
         $customer = new Customer;
         $customer->fill([
-          'kode_customer' => $request->input('kode_customer'),
+          'kode_customer' => $request->input('kd_customer'),
           'nama_customer' => $request->input('nama_customer'),
           'nama_pimpinan' => $request->input('nama_pimpinan'),
           'alamat' => $request->input('alamat'),
-          'kode_propinsi' => $request->input('kode_propinsi'),
+          'kode_propinsi' => $request->input('kode_provinsi'),
           'kode_kabupaten' => $request->input('kode_kabupaten'),
           'sales_group' => $request->input('sales_group'),
           'no_telepon' => $request->input('no_telepon'),
