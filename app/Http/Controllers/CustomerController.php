@@ -20,43 +20,40 @@ class CustomerController extends Controller
     {
       return view('customer.index');
     }
+
+    public function form(Request $request)
+    {
+      return view('customer.form');
+    }
     /**
      * Insert database for ItemAds
      * Url : /item_ads
      */
     public function show(Request $request){
       return $customer = Customer::paginate(150);
-      // if (count($customer) !== 0) {
-      //     $res['success'] = true;
-      //     $res['result'] = $customer;
-      //     return response($res);
-      // }else{
-      //     $res['success'] = true;
-      //     $res['result'] = 'Data Tidak Ditemukan!';
-      //     return response($res);
-      // }
     }
     public function create(Request $request)
     {
-      $customer = new Customer;
-      $customer->fill([
-        'kode_customer' => $request->input('kode_customer'),
-        'nama_customer' => $request->input('nama_customer'),
-        'nama_pimpinan' => $request->input('nama_pimpinan'),
-        'alamat' => $request->input('alamat'),
-        'kode_propinsi' => $request->input('kode_propinsi'),
-        'kode_kabupaten' => $request->input('kode_kabupaten'),
-        'sales_group' => $request->input('sales_group'),
-        'no_telepon' => $request->input('no_telepon'),
-        'npwp' => $request->input('npwp'),
-        'email' => $request->input('email'),
-        'active' => $request->input('active'),
-      ]);
-      if($customer->save()){
-        $res['success'] = true;
-        $res['result'] = 'Success add new Customer!';
-        return response($res);
-      }
+        return $request->input('alamat');
+      // $customer = new Customer;
+      // $customer->fill([
+      //   'kode_customer' => $request->input('kode_customer'),
+      //   'nama_customer' => $request->input('nama_customer'),
+      //   'nama_pimpinan' => $request->input('nama_pimpinan'),
+      //   'alamat' => $request->input('alamat'),
+      //   'kode_propinsi' => $request->input('kode_propinsi'),
+      //   'kode_kabupaten' => $request->input('kode_kabupaten'),
+      //   'sales_group' => $request->input('sales_group'),
+      //   'no_telepon' => $request->input('no_telepon'),
+      //   'npwp' => $request->input('npwp'),
+      //   'email' => $request->input('email'),
+      //   'active' => $request->input('active'),
+      // ]);
+      // if($customer->save()){
+      //   $res['success'] = true;
+      //   $res['result'] = 'Success add new Customer!';
+      //   return response($res);
+      // }
     }
     /**
      * Get one data ItemAds by id

@@ -52,7 +52,7 @@
                               <th>Active</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody id="customer">
 
                           </tbody>
                         </table>

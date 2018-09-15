@@ -48,15 +48,8 @@ $app->get('/customer', 'CustomerController@index');
 $app->get('/customer/show' , 'CustomerController@show');
 $app->get('/customer/id/{id}', 'CustomerController@read');
 $app->get('/customer/delete/{id}', 'CustomerController@delete');
-$app->post('/customer/create', 'CustomerController@create');
-$app->get('/customer/create', function () use ($app) {
-    // return $app->app->version();
-    // $res['success'] = false;
-    // $res['result'] = 'Not Allowed Method!';
-    // return response($res);
-
-    return 'this is create customer';
-});
+$app->post('/customer/create/post', 'CustomerController@create');
+$app->get('/customer/create','CustomerController@form');
 $app->post('/customer/update/{id}', 'CustomerController@update');
 $app->get('/customer/update/{id}', function () use ($app) {
     // return $app->app->version();
