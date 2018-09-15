@@ -27,8 +27,28 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="form-group">
+                <label for="alamat" class=" form-control-label">Kode Customer</label>
+                <input type="text" id="kode_customer" name="kode_customer" placeholder="kode_customer" class="form-control">
+                <label for="alamat" class=" form-control-label">Nama Customer</label>
+                <input type="text" id="nama_customer" name="nama_customer" placeholder="nama_customer" class="form-control">
+                <label for="alamat" class=" form-control-label">Nama Pimpinan</label>
+                <input type="text" id="nama_pimpinan" name="nama_pimpinan" placeholder="nama_pimpinan" class="form-control">
                 <label for="alamat" class=" form-control-label">Alamat</label>
                 <input type="text" id="alamat" name="alamat" placeholder="Alamat" class="form-control">
+                <label for="alamat" class=" form-control-label">Kode Propinsi</label>
+                <input type="text" id="kode_customer" name="kode_customer" placeholder="kode_customer" class="form-control">
+                <label for="alamat" class=" form-control-label">Kode Kabupaten</label>
+                <input type="text" id="kode_kabupaten" name="kode_kabupaten" placeholder="kode_kabupaten" class="form-control">
+                <label for="alamat" class=" form-control-label">Sales Group</label>
+                <input type="text" id="sales_group" name="sales_group" placeholder="sales_group" class="form-control">
+                <label for="alamat" class=" form-control-label">No Telepon</label>
+                <input type="text" id="no_telepon" name="no_telepon" placeholder="no_telepon" class="form-control">
+                <label for="alamat" class=" form-control-label">NPWP</label>
+                <input type="text" id="npwp" name="npwp" placeholder="npwp" class="form-control">
+                <label for="alamat" class=" form-control-label">Email</label>
+                <input type="text" id="email" name="email" placeholder="email" class="form-control">
+                <label for="alamat" class=" form-control-label">Active</label>
+                <input type="text" id="active" name="active" placeholder="active" class="form-control">
               </div>
           </div>
         </div>
