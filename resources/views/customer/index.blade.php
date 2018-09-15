@@ -41,7 +41,7 @@
                               <th>Alamat</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody id="customer">
 
                           </tbody>
                         </table>

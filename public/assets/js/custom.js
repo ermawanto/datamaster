@@ -1,20 +1,21 @@
 $(document).ready(function() {
     let page = 1;
 
-    manageData();
+    manageDataCustomer();
+    formCustomer();
 
 
-    /* manage data list */
-    function manageData() {
+    /* manage data list customer */
+    function manageDataCustomer() {
         $.ajax({
             dataType: 'json',
             url: '/customer/show',
-            data: {page:page}
+            data:{page:page}
         }).done(function(data){
-          console.log(data.data);
           manageRow(data.data);
         });
     }
+
     /* Add new Item table row */
     function manageRow(data) {
     	var	rows = '';
@@ -28,7 +29,21 @@ $(document).ready(function() {
     	  	rows = rows + '</tr>';
     	});
 
+    	$("#customer").html(rows);
+    }
 
-    	$("tbody").html(rows);
+    function formCustomer() {
+      $('#kirim').click(function(){
+        let url = window.location.pathname + '/post';
+        let alamat = $('#alamat').val();
+
+        $.ajax({
+          url: url,
+          type: 'post',
+          data: {alamat:alamat}
+        }).done(function(data){
+          console.log(data);
+        });
+      });
     }
 });
