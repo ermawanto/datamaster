@@ -29,9 +29,10 @@ class MaterialController extends Controller
      * Insert database for ItemAds
      * Url : /item_ads
      */
-     public function show(Request $request){
+     public function show(Request $request)
+     {
       return $material = Material::orderBy('id','desc')->paginate(50);
-    }
+     }
     public function create(Request $request)
     {
       $material = new Material;

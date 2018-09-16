@@ -37,7 +37,7 @@ $(document).ready(function() {
     	  	rows = rows + '</tr>';
     	});
 
-    	$("#plantsloc").html(rows);
+    	$("#Plantsloc").html(rows);
     }
 
     function formPlantsloc() {

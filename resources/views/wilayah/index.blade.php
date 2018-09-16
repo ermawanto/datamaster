@@ -30,7 +30,7 @@
                     <div class="card-header">
                         <strong class="card-title">Table</strong>
                         <div style="float:right">
-                          <a href="{{url('Wilayah/create')}}"><button class="btn btn-md btn-success">Create</button></a>
+                          <a href="{{url('wilayah/create')}}"><button class="btn btn-md btn-success">Create</button></a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -49,7 +49,7 @@
                               <th>Action</th>
                             </tr>
                           </thead>
-                          <tbody id="Wilayah">
+                          <tbody id="wilayah">
 
                           </tbody>
                         </table>
