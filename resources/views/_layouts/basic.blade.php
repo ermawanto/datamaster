@@ -46,6 +46,9 @@
   <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
   <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script> --}}
   <script src="{{url('assets/js/custom.js')}}"></script>
+  <script src="{{url('assets/js/material.js')}}"></script>
+  <script src="{{url('assets/js/plantsloc.js')}}"></script>
+  <script src="{{url('assets/js/wilayah.js')}}"></script>
 
 </body>
 </html>

@@ -66,15 +66,11 @@ $app->get('/customer/{id}', ['middleware' => 'auth', 'uses' => 'CustomerControll
 $app->get('/all', 'MaterialController@index');
 
 $app->get('/material', 'MaterialController@index');
+$app->get('/material/show' , 'MaterialController@show');
 $app->get('/material/id/{id}', 'MaterialController@read');
 $app->get('/material/delete/{id}', 'MaterialController@delete');
-$app->post('/material/create', 'MaterialController@create');
-$app->get('/material/create', function () use ($app) {
-    // return $spp->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
-});
+$app->post('/material/create/post', 'MaterialController@create');
+$app->get('/material/create','MaterialController@form');
 $app->post('/material/update/{id}', 'MaterialController@update');
 $app->get('/material/update/{id}', function () use ($app) {
     // return $app->app->version();
@@ -91,15 +87,11 @@ $app->get('/material/{id}', ['middleware' => 'auth', 'uses' => 'MaterialControll
 $app->get('/all', 'PlantslocController@index');
 
 $app->get('/plantsloc', 'PlantslocController@index');
+$app->get('/plantsloc/show' , 'PlantslocController@show');
 $app->get('/plantsloc/id/{id}', 'PlantslocController@read');
 $app->get('/plantsloc/delete/{id}', 'PlantslocController@delete');
-$app->post('/plantsloc/create', 'PlantslocController@create');
-$app->get('/plantsloc/create', function () use ($app) {
-    // return $app->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
-});
+$app->post('/plantsloc/create/post', 'PlantslocController@create');
+$app->get('/plantsloc/create','PlantslocController@form');
 $app->post('/plantsloc/update/{id}', 'PlantslocController@update');
 $app->get('/plantsloc/update/{id}', function () use ($app) {
     // return $app->app->version();
@@ -116,15 +108,11 @@ $app->get('/plantsloc/{id}', ['middleware' => 'auth', 'uses' => 'PlantslocContro
 $app->get('/all', 'WilayahController@index');
 
 $app->get('/wilayah', 'WilayahController@index');
+$app->get('/wilayah/show' , 'WilayahController@show');
 $app->get('/wilayah/id/{id}', 'WilayahController@read');
 $app->get('/wilayah/delete/{id}', 'WilayahController@delete');
-$app->post('/wilayah/create', 'WilayahController@create');
-$app->get('/wilayah/create', function () use ($app) {
-    // return $app->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
-});
+$app->post('/wilayah/create/post', 'WilayahController@create');
+$app->get('/wilayah/create','WilayahController@form');
 $app->post('/wilayah/update/{id}', 'WilayahController@update');
 $app->get('/wilayah/update/{id}', function () use ($app) {
     // return $app->app->version();
