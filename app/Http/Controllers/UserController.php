@@ -21,9 +21,7 @@ class UserController extends Controller
             'password'=> $password,
         ]);
         if ($register) {
-            $res['success'] = true;
-            $res['message'] = 'Success register!';
-            return response($res);
+            return redirect('dashboard');
         }else{
             $res['success'] = false;
             $res['message'] = 'Failed to register!';
@@ -41,12 +39,12 @@ class UserController extends Controller
         if ($user) {
               $res['success'] = true;
               $res['message'] = $user;
-        
+
               return response($res);
         }else{
           $res['success'] = false;
           $res['message'] = 'Cannot find user!';
-        
+
           return response($res);
         }
     }

@@ -27,6 +27,12 @@ $app->withFacades();
 
 $app->withEloquent();
 
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Authenticate::class,
+]);
+
+$app->register(App\Providers\AuthServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings

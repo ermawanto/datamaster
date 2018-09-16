@@ -39,17 +39,12 @@ class Authenticate
         if ($this->auth->guard($guard)->guest()) {
             if($request->header('api_token')) {
                 $token = $request->header('api_token');
-                $check_token = User::where ('api_token', $token)->first();
+                $check_token = User::where('api_token', $token)->first();
                 if ($check_token == null) {
-                    $res ['success'] = false;
-                    $res['message'] = 'Permission not allowed!';
-
-                    return response($res);
+                    return view('auth.login');
                 }
             }else{
-                $res['success'] = false;
-                $res['message'] = 'Login please!';
-            return response($res);
+              return 'gagal tidak ada api token';
         }
 
         return $next($request);

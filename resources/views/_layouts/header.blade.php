@@ -16,7 +16,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{url('dashboard')}}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li class="">
                         <a href="{{url('customer')}}"> <i class="menu-icon fa fa-suitcase"></i>Customer </a>

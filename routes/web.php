@@ -17,28 +17,23 @@ $app->post('/fetch', [
 
 //for function user
 $app->get('/', function () use ($app) {
-    //return $app->version();
-    $res['success']=true;
-    $res['result']='Welcome to Data Master';
-    return view('dashboard');
+    return redirect('login');
 });
 
 $app->post('/login', 'LoginController@index');
-$app->get('/login', function () use ($app) {
-    // return $router->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
+$app->get('/login',function(){
+  return view('auth.login');
 });
 $app->post('/register', 'UserController@register');
-$app->get('/register', function () use ($app) {
-    // return $app->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
+$app->get('/register',function(){
+  return view('auth.register');
 });
-$app->get('/user/{id}', ['middleware' => 'auth', 'uses' => 'UserController@get_user']);
+$app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@get_user']);
 //------------------------------------------------------------------------------------------------------------------
+
+$app->get('dashboard',function(){
+  return view('dashboard');
+});
 
 //for function customer
 $app->get('/customer', 'CustomerController@index');
