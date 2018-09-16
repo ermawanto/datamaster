@@ -16,8 +16,8 @@ $app->post('/fetch', [
 ]);
 
 //for function user
-$app->get('/',['middleware' => 'auth'], function () use ($app) {
-    return view('dashboard');
+$app->get('/', function () use ($app) {
+    return redirect('login');
 });
 
 $app->post('/login', 'LoginController@index');
@@ -30,6 +30,10 @@ $app->get('/register',function(){
 });
 $app->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@get_user']);
 //------------------------------------------------------------------------------------------------------------------
+
+$app->get('dashboard',function(){
+  return view('dashboard');
+});
 
 //for function customer
 $app->get('/customer', 'CustomerController@index');

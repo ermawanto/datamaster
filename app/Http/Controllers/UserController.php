@@ -21,9 +21,7 @@ class UserController extends Controller
             'password'=> $password,
         ]);
         if ($register) {
-            $res['success'] = true;
-            $res['message'] = 'Success register!';
-            return response($res);
+            return redirect('dashboard');
         }else{
             $res['success'] = false;
             $res['message'] = 'Failed to register!';

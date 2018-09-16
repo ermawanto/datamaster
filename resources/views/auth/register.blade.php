@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form action="{{url('register')}}" method="post">
                         <div class="form-group">
                             <label>Username</label>
                             <input type="username" name="username" class="form-control" placeholder="Username">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Register</button>
                     </form>

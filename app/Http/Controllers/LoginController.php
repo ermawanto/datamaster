@@ -24,15 +24,17 @@ class LoginController extends Controller
                 $api_token = sha1(time());
                 $create_token = User::where('id', $login->id)->update(['api_token' => $api_token]);
                 if ($create_token) {
-                    $res['success'] = true;
-                    $res['api_token'] = $api_token;
-                    $res['message'] = $login;
-                    return response($res);
+                    // $res['success'] = true;
+                    // $res['api_token'] = $api_token;
+                    // $res['message'] = $login;
+                    // return response($res);
+                    return redirect('/dashboard');
                 }
             }else{
-                $res['success'] = true;
-                $res['message'] = 'You email or password incorrect!';
-                return response($res);
+                // $res['success'] = true;
+                // $res['message'] = 'You email or password incorrect!';
+                // return response($res);
+                return 'password salah';
             }
         }
     }

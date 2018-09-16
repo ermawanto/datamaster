@@ -39,19 +39,20 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form action="{{url('login')}}" method="post">
                         <div class="form-group">
                             <label>Email address</label>
                             <input type="email" name="email" class="form-control" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
                     </form>
-                    <br>
-                    <a href="{{url('register')}}" class="btn btn-md btn-info">Register</a>
+                    <div class="register-link m-t-15 text-center">
+                        <p>Don't have account ? <a href="{{url('register')}}"> Sign Up Here</a></p>
+                    </div>
                 </div>
             </div>
         </div>
