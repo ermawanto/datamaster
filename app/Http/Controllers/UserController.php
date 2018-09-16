@@ -41,12 +41,12 @@ class UserController extends Controller
         if ($user) {
               $res['success'] = true;
               $res['message'] = $user;
-        
+
               return response($res);
         }else{
           $res['success'] = false;
           $res['message'] = 'Cannot find user!';
-        
+
           return response($res);
         }
     }

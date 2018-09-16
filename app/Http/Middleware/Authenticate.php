@@ -47,9 +47,7 @@ class Authenticate
                     return response($res);
                 }
             }else{
-                $res['success'] = false;
-                $res['message'] = 'Login please!';
-            return response($res);
+              return view('auth.login');
         }
 
         return $next($request);
