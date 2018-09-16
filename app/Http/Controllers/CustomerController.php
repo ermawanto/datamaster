@@ -16,12 +16,12 @@ class CustomerController extends Controller
     /**
      * Get all data from customer
      */
-    public function index(Request $request)
+    public function index()
     {
       return view('customer.index');
     }
 
-    public function form(Request $request)
+    public function form()
     {
       return view('customer.form');
     }
@@ -36,7 +36,7 @@ class CustomerController extends Controller
     {
         $customer = new Customer;
         $customer->fill([
-          'kode_customer' => $request->input('kd_customer'),
+          'kode_customer' => $request->input('kode_customer'),
           'nama_customer' => $request->input('nama_customer'),
           'nama_pimpinan' => $request->input('nama_pimpinan'),
           'alamat' => $request->input('alamat'),
@@ -64,16 +64,17 @@ class CustomerController extends Controller
      */
     public function read(Request $request, $id)
     {
-      $customer = Customer::where('id',$id)->first();
-      if ($customer !== null) {
-        $res['success'] = true;
-        $res['result'] = $customer;
-        return response($res);
-      }else{
-        $res['success'] = false;
-        $res['result'] = 'Data not found!';
-        return response($res);
-      }
+      return $customer = Customer::where('id',$id)->first();
+
+      // if ($customer !== null) {
+      //   $res['success'] = true;
+      //   $res['result'] = $customer;
+      //   return response($res);
+      // }else{
+      //   $res['success'] = false;
+      //   $res['result'] = 'Data not found!';
+      //   return response($res);
+      // }
     }
     /**
      * Update data ItemAds by ud

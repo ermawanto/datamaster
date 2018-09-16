@@ -29,6 +29,7 @@ $(document).ready(function() {
             rows = rows + '<td>'+value.nama_jenis_produk+'</td>';
             rows = rows + '<td>'+value.group_produk+'</td>';
             rows = rows + '<td>'+value.group_produk_desc+'</td>';
+            rows = rows + '<td data-id='+value.id+'></td>';
             rows = rows + '<td>'+value.active+'</td>';
             rows = rows + '<td>';
             rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';

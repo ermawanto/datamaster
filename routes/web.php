@@ -41,23 +41,14 @@ $app->get('/user/{id}', ['middleware' => 'auth', 'uses' => 'UserController@get_u
 //------------------------------------------------------------------------------------------------------------------
 
 //for function customer
-
-$app->get('/all', 'CustomerController@index');
-
 $app->get('/customer', 'CustomerController@index');
 $app->get('/customer/show' , 'CustomerController@show');
-$app->get('/customer/id/{id}', 'CustomerController@read');
-$app->get('/customer/delete/{id}', 'CustomerController@delete');
 $app->post('/customer/create/post', 'CustomerController@create');
 $app->get('/customer/create','CustomerController@form');
-$app->post('/customer/update/{id}', 'CustomerController@update');
-$app->get('/customer/update/{id}', function () use ($app) {
-    // return $app->app->version();
-    $res['success'] = false;
-    $res['result'] = 'Not Allowed Method!';
-    return response($res);
-});
-$app->get('/customer/{id}', ['middleware' => 'auth', 'uses' => 'CustomerController@get_customer']);
+$app->get('/customer/edit', 'CustomerController@form');
+$app->post('/customer/edit/post', 'CustomerController@create');
+$app->get('/customer/id/{id}','CustomerController@read');
+$app->get('/customer/delete/{id}', 'CustomerController@delete');
 //------------------------------------------------------------------------------------------------------------------
 
 

@@ -28,7 +28,7 @@
           <div class="col-lg-12">
               <div class="form-group">
                 <label for="alamat" class=" form-control-label">Kode Customer</label>
-                <input type="text" id="kd_customer" name="kode_customer" placeholder="kode customer" class="form-control">
+                <input type="text" id="kode_customer" name="kode_customer" placeholder="kode customer" class="form-control">
                 <label for="alamat" class=" form-control-label">Nama Customer</label>
                 <input type="text" id="nama_customer" name="nama_customer" placeholder="nama customer" class="form-control">
                 <label for="alamat" class=" form-control-label">Nama Pimpinan</label>

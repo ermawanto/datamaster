@@ -30,6 +30,7 @@ $(document).ready(function() {
             rows = rows + '<td>'+value.sales_group+'</td>';
             rows = rows + '<td>'+value.code_kecamatan+'</td>';
             rows = rows + '<td>'+value.kecamatan+'</td>';
+            rows = rows + '<td data-id='+value.id+'></td>';
             rows = rows + '<td>';
             rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';
             rows = rows + '<button class="btn btn-danger remove-item">Delete</button>';

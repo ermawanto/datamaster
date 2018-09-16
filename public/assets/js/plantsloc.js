@@ -29,6 +29,7 @@ $(document).ready(function() {
             rows = rows + '<td>'+value.nama_storage_location+'</td>';
             rows = rows + '<td>'+value.code_shipping_point+'</td>';
             rows = rows + '<td>'+value.nama_shipping_point+'</td>';
+            rows = rows + '<td data-id='+value.id+'></td>';
             rows = rows + '<td>'+value.code_propinsi+'</td>';
             rows = rows + '<td>';
             rows = rows + '<button data-toggle="modal" data-target="#edit-item" class="btn btn-primary edit-item">Edit</button> ';
