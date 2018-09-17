@@ -31,7 +31,7 @@ class MaterialController extends Controller
      */
      public function show(Request $request)
      {
-      return $material = Material::orderBy('id','desc')->paginate(50);
+      return $material = Material::orderBy('id','desc')->paginate(100);
      }
     public function create(Request $request)
     {
