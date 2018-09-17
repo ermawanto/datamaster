@@ -37,7 +37,7 @@ $app->get('dashboard',function(){
 
 //for function customer
 $app->get('/customer',['middleware' => 'auth'], 'CustomerController@index');
-$app->get('/customer/show' , 'CustomerController@show');
+$app->get('/customer/show', ['middleware' => 'auth'], 'CustomerController@show');
 $app->post('/customer/create/post', 'CustomerController@create');
 $app->get('/customer/create','CustomerController@form');
 $app->get('/customer/edit', 'CustomerController@form');
